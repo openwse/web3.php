@@ -43,6 +43,7 @@ class Personal
         'personal_unlockAccount',
         'personal_lockAccount',
         'personal_sendTransaction',
+        'personal_sign',
         'personal_importRawKey',
     ];
 

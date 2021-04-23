@@ -14,18 +14,15 @@ namespace Web3\RequestManagers;
 use InvalidArgumentException;
 use Psr\Http\Message\StreamInterface;
 use RuntimeException as RPCException;
-use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Client;
-use Web3\RequestManagers\RequestManager;
-use Web3\RequestManagers\IRequestManager;
 
 class HttpRequestManager extends RequestManager implements IRequestManager
 {
     /**
      * client
      *
-     * @var \GuzzleHttp
+     * @var Client
      */
     protected $client;
 
@@ -36,10 +33,10 @@ class HttpRequestManager extends RequestManager implements IRequestManager
      * @param int $timeout
      * @return void
      */
-    public function __construct($host, $timeout = 1)
+    public function __construct($host, $timeout = 10)
     {
         parent::__construct($host, $timeout);
-        $this->client = new Client;
+        $this->client = new Client();
     }
 
     /**

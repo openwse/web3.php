@@ -9,14 +9,15 @@
  * @license MIT
  */
 
-namespace Web3\Methods\Personal;
+namespace Web3\Methods\Eth;
 
-use Web3\Formatters\HexFormatter;
-use Web3\Methods\EthMethod;
-use Web3\Validators\StringValidator;
 use Web3\Formatters\StringFormatter;
+use Web3\Formatters\TransactionFormatter;
+use Web3\Methods\EthMethod;
+use Web3\Formatters\HexFormatter;
+use Web3\Validators\TransactionValidator;
 
-class ImportRawKey extends EthMethod
+class SignTransaction extends EthMethod
 {
     /**
      * validators
@@ -24,8 +25,7 @@ class ImportRawKey extends EthMethod
      * @var array
      */
     protected $validators = [
-        StringValidator::class,
-        StringValidator::class,
+        TransactionValidator::class
     ];
 
     /**
@@ -34,8 +34,7 @@ class ImportRawKey extends EthMethod
      * @var array
      */
     protected $inputFormatters = [
-        StringFormatter::class,
-        StringFormatter::class,
+        TransactionFormatter::class
     ];
 
     /**
@@ -51,4 +50,16 @@ class ImportRawKey extends EthMethod
      * @var array
      */
     protected $defaultValues = [];
+
+    /**
+     * construct
+     *
+     * @param string $method
+     * @param array $arguments
+     * @return void
+     */
+    // public function __construct($method='', $arguments=[])
+    // {
+    //     parent::__construct($method, $arguments);
+    // }
 }

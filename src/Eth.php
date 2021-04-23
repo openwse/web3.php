@@ -2,9 +2,9 @@
 
 /**
  * This file is part of web3.php package.
- * 
+ *
  * (c) Kuan-Cheng,Lai <alk03073135@gmail.com>
- * 
+ *
  * @author Peter Lai <alk03073135@gmail.com>
  * @license MIT
  */
@@ -27,18 +27,18 @@ class Eth
 
     /**
      * methods
-     * 
+     *
      * @var array
      */
     private $methods = [];
 
     /**
      * allowedMethods
-     * 
+     *
      * @var array
      */
     private $allowedMethods = [
-        'eth_protocolVersion', 'eth_syncing', 'eth_coinbase', 'eth_mining', 'eth_hashrate', 'eth_gasPrice', 'eth_accounts', 'eth_blockNumber', 'eth_getBalance', 'eth_getStorageAt', 'eth_getTransactionCount', 'eth_getBlockTransactionCountByHash', 'eth_getBlockTransactionCountByNumber', 'eth_getUncleCountByBlockHash', 'eth_getUncleCountByBlockNumber', 'eth_getUncleByBlockHashAndIndex', 'eth_getUncleByBlockNumberAndIndex', 'eth_getCode', 'eth_sign', 'eth_sendTransaction', 'eth_sendRawTransaction', 'eth_call', 'eth_estimateGas', 'eth_getBlockByHash', 'eth_getBlockByNumber', 'eth_getTransactionByHash', 'eth_getTransactionByBlockHashAndIndex', 'eth_getTransactionByBlockNumberAndIndex', 'eth_getTransactionReceipt', 'eth_compileSolidity', 'eth_compileLLL', 'eth_compileSerpent', 'eth_getWork', 'eth_newFilter', 'eth_newBlockFilter', 'eth_newPendingTransactionFilter', 'eth_uninstallFilter', 'eth_getFilterChanges', 'eth_getFilterLogs', 'eth_getLogs', 'eth_submitWork', 'eth_submitHashrate'
+        'eth_protocolVersion', 'eth_syncing', 'eth_coinbase', 'eth_mining', 'eth_hashrate', 'eth_gasPrice', 'eth_accounts', 'eth_blockNumber', 'eth_getBalance', 'eth_getStorageAt', 'eth_getTransactionCount', 'eth_getBlockTransactionCountByHash', 'eth_getBlockTransactionCountByNumber', 'eth_getUncleCountByBlockHash', 'eth_getUncleCountByBlockNumber', 'eth_getUncleByBlockHashAndIndex', 'eth_getUncleByBlockNumberAndIndex', 'eth_getCode', 'eth_sign', 'eth_signTransaction', 'eth_sendTransaction', 'eth_sendRawTransaction', 'eth_call', 'eth_estimateGas', 'eth_getBlockByHash', 'eth_getBlockByNumber', 'eth_getTransactionByHash', 'eth_getTransactionByBlockHashAndIndex', 'eth_getTransactionByBlockNumberAndIndex', 'eth_getTransactionReceipt', 'eth_compileSolidity', 'eth_compileLLL', 'eth_compileSerpent', 'eth_getWork', 'eth_newFilter', 'eth_newBlockFilter', 'eth_newPendingTransactionFilter', 'eth_uninstallFilter', 'eth_getFilterChanges', 'eth_getFilterLogs', 'eth_getLogs', 'eth_submitWork', 'eth_submitHashrate'
     ];
 
     /**
@@ -63,7 +63,7 @@ class Eth
 
     /**
      * call
-     * 
+     *
      * @param string $name
      * @param array $arguments
      * @return void
@@ -109,7 +109,7 @@ class Eth
 
     /**
      * get
-     * 
+     *
      * @param string $name
      * @return mixed
      */
@@ -125,7 +125,7 @@ class Eth
 
     /**
      * set
-     * 
+     *
      * @param string $name
      * @param mixed $value
      * @return mixed
@@ -142,7 +142,7 @@ class Eth
 
     /**
      * getProvider
-     * 
+     *
      * @return \Web3\Providers\Provider
      */
     public function getProvider()
@@ -152,7 +152,7 @@ class Eth
 
     /**
      * setProvider
-     * 
+     *
      * @param \Web3\Providers\Provider $provider
      * @return bool
      */
@@ -167,7 +167,7 @@ class Eth
 
     /**
      * batch
-     * 
+     *
      * @param bool $status
      * @return void
      */

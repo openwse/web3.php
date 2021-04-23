@@ -11,12 +11,16 @@
 
 namespace Web3\Methods\Personal;
 
-use Web3\Formatters\HexFormatter;
+use InvalidArgumentException;
+use Web3\Formatters\AddressFormatter;
 use Web3\Methods\EthMethod;
+use Web3\Validators\AddressValidator;
+use Web3\Validators\TransactionValidator;
 use Web3\Validators\StringValidator;
+use Web3\Formatters\TransactionFormatter;
 use Web3\Formatters\StringFormatter;
 
-class ImportRawKey extends EthMethod
+class Sign extends EthMethod
 {
     /**
      * validators
@@ -25,6 +29,7 @@ class ImportRawKey extends EthMethod
      */
     protected $validators = [
         StringValidator::class,
+        AddressValidator::class,
         StringValidator::class,
     ];
 
@@ -35,6 +40,7 @@ class ImportRawKey extends EthMethod
      */
     protected $inputFormatters = [
         StringFormatter::class,
+        AddressFormatter::class,
         StringFormatter::class,
     ];
 
