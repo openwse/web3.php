@@ -44,6 +44,7 @@ class Personal
         'personal_lockAccount',
         'personal_sendTransaction',
         'personal_sign',
+        'personal_ecRecover',
         'personal_importRawKey',
     ];
 
